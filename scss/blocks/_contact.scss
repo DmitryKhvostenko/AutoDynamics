@@ -1,0 +1,154 @@
+.contact {
+    margin-bottom: 100px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+
+        input,
+        button {
+            height: 60px;
+        }
+    }
+
+    &__wrapper {
+        height: 293px;
+        background-color: rgba(0, 0, 0, 1);
+        background-image: url('./../images/contact/background.png');
+        background-repeat: no-repeat;
+        padding: 40px 30px 40px 40px
+    }
+
+    &__button {
+        cursor: pointer;
+        background: #DC4433;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background: #ba3526;
+        }
+    }
+
+    &__error.err {
+        position: relative;
+
+        &::after {
+            content: 'Заполните поле';
+            position: absolute;
+            color: #ba3526;
+            top: -17px;
+            left: 15px;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+
+    &__label {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+
+        & span {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+
+        &.errCheck::after {
+            content: 'Необходимо принять!';
+            position: absolute;
+            color: #ba3526;
+            bottom: -15px;
+            right: 25%;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        margin-top: 15px;
+        display: flex;
+        column-gap: 10px;
+        justify-content: end;
+        margin-right: 10%;
+    }
+
+    &__sub-button {
+        margin-top: -9px;
+        accent-color: #ffffff;
+    }
+    &__name,&__error,&__button,&__email {
+        width: 24%;
+    }
+    &__number {
+        width: 100%;
+    }
+}
+
+@media (max-width:1000px) {
+    .contact {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .contact {
+        &__wrapper {
+            height: auto;
+            background-image: url('./../images/contact/background-mob.png');
+        }
+        &__form {
+            flex-direction: column;
+            row-gap: 20px;
+            &> * input {
+                width: 100% !important;
+                height: 60px !important;
+                font-size: 16px;
+            }
+            &> *{
+                width: 100% !important;
+                height: 60px !important;
+                font-size: 16px;
+            }
+        }
+        &__checkbox {
+            justify-content: start;
+        }
+    }
+}
+
+@media (max-width:355px) {
+    .contact {
+        &__wrapper {
+            padding: 20px;
+        }
+        &__checkbox {
+            margin-right: auto;
+        }
+    }
+}

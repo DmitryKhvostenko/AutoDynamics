@@ -1,0 +1,119 @@
+.advantages {
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        color: #212121;
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 30px;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        padding: 15px;
+        border: 1px solid #C7C7C7;
+        box-shadow: 10px 10px 24px rgba(188, 188, 188, 0.25);
+        border-radius: 4px;
+        width: 255px;
+        height: 180px;
+    }
+
+    &__item-image {
+        margin-bottom: 10px;
+    }
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__right-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        width: 41%;
+    }
+
+    &__second-image {
+        position: relative;
+        &::after {
+            content: "CAI from leading insurance companies as a gift when buying KIA cars on credit";
+            position: absolute;
+            top: 10px;
+            left: 17px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 115%;
+            color: #FFFFFF;
+            width: 90%;
+        }
+    }
+
+    &__right-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__left-images {
+        position: relative;
+        width: 57%;
+        &::after {
+            content: "When buying a Geely Coolray 3 under the Geely Finance program, a set of winter tires as a gift";
+            position: absolute;
+            bottom: 25px;
+            left: 20px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 115%;
+            color: #FFFFFF;
+        }
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media(max-width:1068px) {
+    .advantages__items {
+        margin-bottom: 40px;
+    }
+    .advantages__left-images::after {
+        font-size: 20px;
+    }
+    .advantages__second-image::after {
+        font-size: 14px;
+    }
+}
+@media (max-width:767.98px) {
+    .advantages {
+        &__items {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        &__item {
+            width: 47%;
+        }
+        &__images {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        &__left-images,&__right-images {
+            width: 100%;
+            row-gap: 20px;
+        }
+    }
+}
+@media (max-width:364px) {
+    .advantages__item {
+        width: 100%;
+    }
+    .advantages__left-images::after {
+        font-size: 16px;
+    }
+}
