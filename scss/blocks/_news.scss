@@ -1,0 +1,214 @@
+.news {
+    margin-bottom: 100px;
+    margin-top: 50px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        color: #212121;
+    }
+
+    &__check-all {
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #424242;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        cursor: pointer;
+        width: 31.7%;
+        height: auto;
+        border: 1px solid #C7C7C7;
+        border-radius: 4px;
+
+        &-content {
+            padding: 15px;
+        }
+
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+
+        &-time {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #424242;
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            color: #212121;
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #424242;
+        }
+    }
+
+    &__amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 255px;
+        height: 30px;
+        padding: 7px 15px;
+        border: 1px solid #C7C7C7;
+        border-radius: 6px;
+    }
+    &__options {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+    &__select {
+        border: 1px solid #C7C7C7;
+        border-radius: 6px;
+        width: 255px;
+        height: 30px;
+        background-position:
+            calc(100% - 17px) calc(1em + -3px), calc(100% - 14px) calc(1em + -3px), 100% 0;
+    }
+
+    &__number {
+        cursor: pointer;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #C7C7C7;
+        &.active {
+            font-weight: 600;
+            color: #000000;
+        }
+    }
+}
+
+.main-news {
+    margin-top: 0;
+    margin-bottom: 100px;
+
+    &__content {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        width: 255px;
+    }
+}
+
+@media (max-width:1000px) {
+    .news {
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media(max-width:940px) {
+    .news__item {
+        &-title {
+            font-size: 16px;
+        }
+
+        &-text {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width:767.98px) {
+    .news {
+        &__header {
+            flex-direction: column;
+            align-items: start;
+            row-gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__item {
+            width: 47%;
+
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+        &__options {
+            justify-content: space-between;
+            gap: 10px;
+            width: 100%;
+            & > * {
+                width: 200px;
+            }
+        }
+    }
+
+    .main-news {
+        &__item {
+            width: 46%;
+        }
+    }
+}
+
+@media (max-width: 488px) {
+    .main-news {
+        &__item {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .news {
+        &__options {
+            flex-direction: column;
+            & > * {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:355px) {
+    .news {
+        &__content {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        &__item {
+            width: 100%;
+            height: 350px;
+        }
+    }
+}

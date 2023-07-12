@@ -1,0 +1,165 @@
+.special {
+    margin: 100px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        color: #212121;
+    }
+
+    &__check-all {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #424242;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-slider {
+        width: 350px !important;
+        border: 1px solid #C7C7C7;
+        border-radius: 4px;
+
+        &__content {
+            padding: 15px;
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #212121;
+            margin-bottom: 43px;
+        }
+
+        &__border {
+            width: 100%;
+            height: 1px;
+            background: #C7C7C7;
+        }
+
+        &__list {
+            margin: 15px 0;
+        }
+
+        &__list-wrapper {
+            display: flex;
+
+            &:nth-child(1) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &__item {
+            width: 50%;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: #424242;
+
+            & span {
+                color: #000000;
+                font-weight: 500;
+            }
+        }
+
+        &__price {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #424242;
+            margin: 15px 0px 25px 0px;
+
+            & span {
+                color: #000000;
+                font-weight: 500;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        &__button-book,
+        &__button-trade {
+            cursor: pointer;
+            width: 47%;
+            height: 40px;
+            border-radius: 6px;
+            transition: all 0.3s ease 0s;
+        }
+        &__button-book {
+            border: 1px solid #000000;
+            background-color: transparent;
+            &:hover {
+                color: $btnHvr;
+            }
+        }
+        &__button-trade {
+            background-color: #000000;
+            color: #ffffff;
+            &:hover {
+                color: $btnHvr;
+            }
+        }
+        &__button-credit {
+            height: 40px;
+            width: 100%;
+            background-color: $btn;
+            color: #ffffff;
+            transition: all 0.3s ease 0s;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            &:hover {
+                background-color: $btnHvr;
+            }
+        }
+    }
+}
+@media (max-width:1000px) {
+    .special {
+        margin: 40px 0;
+        &-slider__title {
+            margin-bottom: 9px;
+        }
+    }
+}
+
+@media (max-width:767.98px) {
+    .special {
+        &__header {
+            flex-direction: column;
+            align-items: start;
+            row-gap: 20px;
+        }
+    }
+}
+
+@media (max-width:417px) {
+    .special {
+        &-slider {
+            width: 95% !important;
+            margin: 0 10px;
+        }
+    }
+}
